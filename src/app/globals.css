@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --accent: #E8A33D;
+}
+
+html,
+body {
+  background: #121212;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Subtle warm halo at the top — atmosphere, not decoration. */
+  background-image:
+    radial-gradient(120% 60% at 50% -10%, rgba(232, 163, 61, 0.08) 0%, transparent 60%),
+    linear-gradient(180deg, #141414 0%, #101010 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Hide the horizontal scrollbar on the section tabs while keeping scroll. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Dotted leader between item name/volume and price.
+   A 1px-tall background of dots, repeated, baseline-aligned. */
+.leader {
+  flex: 1;
+  height: 1px;
+  align-self: end;
+  margin-bottom: 0.45rem;
+  background-image: radial-gradient(circle, rgba(154, 154, 154, 0.55) 0.55px, transparent 0.9px);
+  background-size: 6px 1px;
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+}
