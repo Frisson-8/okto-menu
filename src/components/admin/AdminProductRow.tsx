@@ -109,6 +109,14 @@ export function AdminProductRow({
   return (
     <li className={`py-3 border-b border-white/5 transition-opacity ${dimmed ? 'opacity-50' : ''}`}>
       <div className="flex items-baseline gap-3">
+        {product.image_url && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={product.image_url}
+            alt=""
+            className="h-9 w-9 shrink-0 object-cover border border-white/10"
+          />
+        )}
         <div className="min-w-0 flex-1 flex items-baseline gap-2">
           <span className="font-medium text-white truncate">{product.name}</span>
           {product.volume && (

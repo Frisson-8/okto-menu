@@ -94,11 +94,11 @@ sub-headers; products are rows (name, volume, price in DIN). Show footer_note
 
 ## Current status
 - [x] Schema + RLS + storage, two-level model, seeded with real OKTO menu (schema.sql)
-- [ ] Phase 0: project setup
-- [ ] Phase 1: public menu (read-only) — ship first
-- [ ] Phase 2: admin auth
-- [ ] Phase 3: product CRUD
-- [ ] Phase 4: category CRUD + image upload
+- [x] Phase 0: project setup
+- [x] Phase 1: public menu (read-only) — ship first
+- [x] Phase 2: admin auth
+- [x] Phase 3: product CRUD
+- [x] Phase 4: section + category CRUD + image upload
 - [ ] Phase 5: drag-and-drop ordering
 - [ ] Phase 6: settings panel
 - [ ] Phase 7: deploy + QR code

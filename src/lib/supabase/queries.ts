@@ -22,7 +22,7 @@ export type MenuProduct = Pick<
 
 export type MenuCategory = Pick<
   CategoryRow,
-  'id' | 'name' | 'sort_order' | 'is_active'
+  'id' | 'name' | 'description' | 'sort_order' | 'is_active'
 > & { products: MenuProduct[] };
 
 export type MenuSection = Pick<
@@ -32,7 +32,7 @@ export type MenuSection = Pick<
 
 const MENU_SELECT =
   'id,name,sort_order,is_active,' +
-  'categories(id,name,sort_order,is_active,' +
+  'categories(id,name,description,sort_order,is_active,' +
   'products(id,name,description,volume,price,image_url,sort_order,is_available))';
 
 export async function getSettings(): Promise<SettingsRow | null> {
